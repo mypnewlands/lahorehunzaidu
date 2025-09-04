@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Tale of Two Cities: Hunza & Lahore</title>
+    <title>A Tale of Two Cities: Lahore & Hunza</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Warm Neutrals with Subtle Earth Tones -->
-    <!-- Application Structure Plan: The application is structured as a narrative journey, starting with an introduction and then allowing users to explore four distinct "lenses" (Mathematics, Science, Language & Literature, Visual Arts) via a tab-based navigation. This thematic structure was chosen over a linear report format to encourage non-linear exploration and allow users to dive into the topics that interest them most. Each section provides a side-by-side comparison of Hunza and Lahore, maintaining a consistent comparative framework. The final "Discourse" section synthesizes the key inspirational takeaways from all lenses, providing a cohesive conclusion to the user's journey. This structure enhances usability by breaking down complex information into digestible, interactive modules. -->
-    <!-- Visualization & Content Choices: Data (tourism, air quality) is presented using interactive bar charts (Chart.js) for clear, at-a-glance comparison. Scientific systems (Karez, Miyawaki forest) are explained using diagrams built with HTML/CSS for simplicity and interactivity. Textual narratives are presented in clickable cards to engage the user and avoid overwhelming them with text. The visual arts section uses a gallery layout to emphasize the aesthetic differences. These choices prioritize user engagement and understanding by selecting the most effective interactive method for each type of content, supporting the overall narrative structure. -->
+    <!-- Application Structure Plan: The application is structured as a narrative journey, starting with an introduction and then allowing users to explore four distinct "lenses" (Mathematics, Science, Language & Literature, Visual Arts) via a tab-based navigation. This thematic structure was chosen over a linear report format to encourage non-linear exploration and allow users to dive into the topics that interest them most. Each section provides a side-by-side comparison of Hunza and Lahore, maintaining a consistent comparative framework. The new "Integrated Humanities" section combines the previous language and art themes to better demonstrate their synthesis. The final "Discourse" section synthesizes the key inspirational takeaways from all lenses, providing a cohesive conclusion to the user's journey. This structure enhances usability by breaking down complex information into digestible, interactive modules. -->
+    <!-- Visualization & Content Choices: Data (tourism, air quality) is presented using interactive bar charts (Chart.js) for clear, at-a-glance comparison. Scientific systems (Karez, Miyawaki forest) are explained using diagrams built with structured HTML/CSS for simplicity and interactivity. The "Integrated Humanities" section uses a combination of card flips for narrative excerpts and image placeholders for visual examples, encouraging user engagement with both text and art. The visual arts section uses a gallery layout to emphasize the aesthetic differences. These choices prioritize user engagement and understanding by selecting the most effective interactive method for each type of content, supporting the overall narrative structure. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
@@ -86,7 +86,7 @@
         <section id="summary" class="text-center mb-12">
             <h2 class="text-2xl font-semibold text-[#5c4b3a] mb-4">The Heart of the Inquiry</h2>
             <p class="max-w-3xl mx-auto text-lg leading-relaxed">
-                This interactive experience explores how two vastly different Pakistani environments—the serene, mountainous Hunza Valley and the bustling, urban hub of Lahore—serve as powerful sources of human inspiration. We move beyond comparing challenges to understand how these environments foster unique forms of innovation, resilience, and cultural expression.
+                This interactive experience explores how two vastly different Indus environments—the serene, mountainous Hunza Valley and the bustling, urban hub of Lahore—serve as powerful sources of human inspiration. We move beyond comparing challenges to understand how these environments foster unique forms of innovation, resilience, and cultural expression.
             </p>
         </section>
 
@@ -95,6 +95,7 @@
             <button class="tab-btn py-4 px-6 text-lg" data-tab="science">Science</button>
             <button class="tab-btn py-4 px-6 text-lg" data-tab="language">Language & Literature</button>
             <button class="tab-btn py-4 px-6 text-lg" data-tab="art">Visual Arts</button>
+            <button class="tab-btn py-4 px-6 text-lg" data-tab="humanities">Integrated Humanities</button>
             <button class="tab-btn py-4 px-6 text-lg" data-tab="discourse">Discourse</button>
         </nav>
 
@@ -130,7 +131,7 @@
                 <div class="grid md:grid-cols-2 gap-8 items-start">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <h4 class="text-xl font-semibold text-center mb-4 text-[#8b6e4b]">Hunza: The Science of Tradition</h4>
-                         <p class="text-center mb-4">The people of Hunza engineered a sustainable relationship with their rugged ecosystem. The Karez irrigation system, a marvel of traditional science, uses gravity to channel glacial meltwater, ensuring agricultural survival by minimizing waste and erosion.</p>
+                         <p class="text-center mb-4">The people of Hunza engineered a sustainable relationship with their rugged ecosystem. The Karez irrigation system is a marvel of traditional science, using gravity to channel meltwater, minimizing waste and erosion.</p>
                         <div class="border-2 border-dashed border-[#c7a17a] p-4 rounded-lg bg-[#fdfaf6]">
                             <p class="font-bold text-center text-[#5c4b3a]">Karez Irrigation System</p>
                             <div class="mt-2 space-y-2">
@@ -180,12 +181,12 @@
             <div id="language-content" class="tab-content">
                 <div class="text-center mb-8">
                     <h3 class="text-2xl font-bold text-[#5c4b3a]">The Language of Place</h3>
-                    <p class="mt-2 text-lg">Deconstructing the narratives that define each place, from epic oral histories to urgent news headlines.</p>
+                    <p class="mt-2 text-lg">Deconstructing the narratives and stories that define each place and how they inspire us.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <h4 class="text-xl font-semibold text-center mb-4 text-[#8b6e4b]">Hunza: A Narrative of Awe & Heritage</h4>
-                        <p class="text-center mb-4">Hunza's landscape inspires language that is poetic, reverent, and personal. The narratives teach us that resilience is found in preserving heritage and community ties.</p>
+                        <p class="text-center mb-4">Hunza's landscape inspires language that is poetic, reverent, and deeply personal. The narratives teach us that resilience is found in preserving heritage and community ties.</p>
                         <div class="card-flip h-48">
                             <div class="card-flip-inner">
                                 <div class="card-face bg-[#fdfaf6] border border-[#c7a17a]">
@@ -200,7 +201,7 @@
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <h4 class="text-xl font-semibold text-center mb-4 text-[#8b6e4b]">Lahore: A Narrative of Action & Hope</h4>
-                        <p class="text-center mb-4">Lahore's environment inspires a language that is urgent, solution-oriented, and energetic. The narrative teaches that resilience is a dynamic process of adaptation.</p>
+                        <p class="text-center mb-4">Lahore's environment inspires a language that is urgent, solution-oriented, and full of forward-looking energy. The narrative teaches that resilience is a dynamic process of adaptation.</p>
                          <div class="card-flip h-48">
                             <div class="card-flip-inner">
                                 <div class="card-face bg-[#fdfaf6] border border-[#c7a17a]">
@@ -234,7 +235,48 @@
                     </div>
                 </div>
             </div>
-            
+
+            <div id="humanities-content" class="tab-content">
+                 <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-[#5c4b3a]">Integrated Humanities: The Narrative of Place</h3>
+                    <p class="mt-2 text-lg">Deconstructing how language and visual arts are intertwined to shape our understanding of each place within the global context of **Identities and relationships** and **Orientation in space and time**.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-semibold text-center mb-4 text-[#8b6e4b]">Hunza: The Poetic Soul of a Place</h4>
+                        <p class="text-center mb-4">Hunza's landscape inspires language that is poetic, reverent, and personal. This narrative is expressed in both text and visual art. Activities include: comparing traditional Hunza poetry and paintings to determine how both mediums communicate the importance of the mountains to the local identity.</p>
+                        <div class="card-flip h-48 mb-4">
+                            <div class="card-flip-inner">
+                                <div class="card-face bg-[#fdfaf6] border border-[#c7a17a]">
+                                    <p class="font-semibold">Oral History & Poetry</p>
+                                    <p class="text-sm">(Hover to reveal)</p>
+                                </div>
+                                <div class="card-face card-back bg-[#c7a17a] text-white">
+                                    <p class="italic">"The mountain does not just stand; it watches. Our ancestors knew this. They listened to the water, and it taught them how to live."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://placehold.co/600x400/a3b18a/ffffff?text=Hunza+Inspired+Art" alt="Art inspired by Hunza" class="w-full h-auto rounded-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/a3b18a/ffffff?text=Image+Not+Found';">
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-semibold text-center mb-4 text-[#8b6e4b]">Lahore: The Vibrant Pulse of a City</h4>
+                        <p class="text-center mb-4">Lahore's urban environment inspires a language that is urgent, solution-oriented, and full of forward-looking energy. This pulse is felt in both the city's narratives and its vibrant art. Activities include: analyzing how news headlines and a piece of street art communicate the same feeling of resilience and optimism in the face of urban challenges.</p>
+                         <div class="card-flip h-48 mb-4">
+                            <div class="card-flip-inner">
+                                <div class="card-face bg-[#fdfaf6] border border-[#c7a17a]">
+                                    <p class="font-semibold">News Headline & Urban Poetry</p>
+                                    <p class="text-sm">(Hover to reveal)</p>
+                                </div>
+                                <div class="card-face card-back bg-[#c7a17a] text-white">
+                                    <p class="italic">"Lahore's 'Green Lung' Project Shows 15% Improvement in Local Air Quality, Inspiring New City-Wide Initiatives."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://placehold.co/600x400/d4a373/ffffff?text=Lahore+Inspired+Art" alt="Art inspired by Lahore" class="w-full h-auto rounded-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/d4a373/ffffff?text=Image+Not+Found';">
+                    </div>
+                </div>
+            </div>
+
             <div id="discourse-content" class="tab-content">
                 <div class="text-center mb-8">
                     <h3 class="text-2xl font-bold text-[#5c4b3a]">The Interdisciplinary Discourse</h3>
